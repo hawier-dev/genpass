@@ -31,6 +31,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         setListeners()
+        generatePassword()
         super.onViewCreated(view, savedInstanceState)
     }
     override fun onDestroyView() {
