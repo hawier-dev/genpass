@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeFragment">
+
+    <TextView
+            android:text="@string/password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwdText"
+            android:textSize="34sp"
+            android:textColorHighlight="@color/primary"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/lengthBar"
+            app:layout_constraintStart_toStartOf="@+id/lengthBar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="48dp"
+            app:layout_constraintHorizontal_bias="0.495"
+            android:textAlignment="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:password="false"
+            android:singleLine="false"
+            android:textIsSelectable="false"
+            android:typeface="normal"
+            android:breakStrategy="high_quality"
+            android:editable="false" />
+
+    <Button
+            android:text="@string/gen_passwd"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:id="@+id/genPasswd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.925"
+            app:cornerRadius="@dimen/radius" />
+
+    <com.google.android.material.slider.Slider
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/lengthBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/lengthLabel"
+            android:progress="16"
+            android:max="50"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:maxHeight="23dp"
+            android:minHeight="13dp"
+            app:trackHeight="@dimen/track_height"
+            android:valueFrom="3"
+            android:valueTo="50"
+            android:value="16"
+            android:stepSize="1"
+            app:tickVisible="false"
+            android:contentDescription="@string/length" />
+
+    <TextView
+            android:text="@string/length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lengthLabel"
+            android:textSize="14sp"
+            android:textColor="@color/text_darker"
+            app:layout_constraintStart_toStartOf="@+id/lengthBar"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/uppercaseSwitch"
+            android:layout_marginBottom="24dp" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+            android:text="@string/include_uppercase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/uppercaseSwitch"
+            android:minHeight="48dp"
+            app:layout_constraintStart_toStartOf="@+id/lengthBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:checked="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/symbolsSwitch"
+            app:useMaterialThemeColors="false" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+            android:text="@string/include_symbols"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/symbolsSwitch"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="@+id/lengthBar"
+            app:layout_constraintStart_toStartOf="@+id/lengthBar"
+            android:checked="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColorHighlight="@color/highlighted_text"
+            app:layout_constraintBottom_toTopOf="@+id/numbersSwitch"
+            app:useMaterialThemeColors="false" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+            android:text="@string/include_numbers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/numbersSwitch"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:checked="true"
+            android:showText="false"
+            android:splitTrack="false"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColorHighlight="@color/highlighted_text"
+            app:layout_constraintBottom_toTopOf="@+id/genPasswd"
+            android:layout_marginBottom="16dp"
+            app:useMaterialThemeColors="false" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

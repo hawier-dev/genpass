@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="radius">5dp</dimen>
+    <dimen name="track_height">8dp</dimen>
+</resources>

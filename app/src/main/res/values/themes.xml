@@ -1,0 +1,7 @@
+<resources>
+    <style name="Base.Theme.Genpass" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimaryDark">@color/black</item>
+    </style>
+
+    <style name="Theme.Genpass" parent="Base.Theme.Genpass" />
+</resources>
