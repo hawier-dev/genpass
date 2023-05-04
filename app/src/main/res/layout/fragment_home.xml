@@ -56,24 +56,24 @@
         app:layout_constraintVertical_bias="0.963" />
 
     <com.google.android.material.slider.Slider
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/lengthBar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/lengthLabel"
-            android:progress="16"
-            android:max="50"
-            app:layout_constraintHorizontal_bias="1.0"
-            android:maxHeight="23dp"
-            android:minHeight="13dp"
-            app:trackHeight="@dimen/track_height"
-            android:valueFrom="3"
-            android:valueTo="50"
-            android:value="16"
-            android:stepSize="1"
-            app:tickVisible="false"
-            android:contentDescription="@string/length" />
+        android:id="@+id/lengthBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/length"
+        android:max="50"
+        android:maxHeight="23dp"
+        android:minHeight="13dp"
+        android:progress="16"
+        android:stepSize="1"
+        android:value="16"
+        android:valueFrom="3"
+        android:valueTo="50"
+        app:layout_constraintBottom_toTopOf="@+id/lengthLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tickVisible="false"
+        app:trackHeight="@dimen/track_height" />
 
     <TextView
             android:text="@string/length"
@@ -133,5 +133,29 @@
             app:layout_constraintBottom_toTopOf="@+id/genPasswd"
             android:layout_marginBottom="16dp"
             app:useMaterialThemeColors="false" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        android:progress="3"
+        android:rating="4"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/ratingLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/ratingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Great!"
+        app:layout_constraintBottom_toTopOf="@+id/lengthBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package dev.hawier.genpass
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -30,8 +31,8 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        setListeners()
-        generatePassword()
+        this.setListeners()
+        this.generatePassword()
         super.onViewCreated(view, savedInstanceState)
     }
     override fun onDestroyView() {
@@ -74,5 +75,26 @@ class HomeFragment : Fragment() {
     private fun generatePassword() {
         passwordGenerator.generatePassword()
         this.binding.passwdText.text = passwordGenerator.password
+        this.binding.ratingBar.rating = passwordGenerator.rating.toFloat()
+
+        if (passwordGenerator.rating == 0) {
+            this.binding.ratingLabel.text = "Very weak"
+            this.binding.ratingLabel.setTextColor(Color.parseColor("#ff7575"))
+        } else if (passwordGenerator.rating == 1) {
+            this.binding.ratingLabel.text = "Weak"
+            this.binding.ratingLabel.setTextColor(Color.parseColor("#ff7575"))
+        } else if (passwordGenerator.rating == 2) {
+            this.binding.ratingLabel.text = "Medium"
+            this.binding.ratingLabel.setTextColor(Color.parseColor("#f7c163"))
+        } else if (passwordGenerator.rating == 3) {
+            this.binding.ratingLabel.text = "Strong"
+            this.binding.ratingLabel.setTextColor(Color.parseColor("#45de8a"))
+        } else if (passwordGenerator.rating == 4) {
+            this.binding.ratingLabel.text = "Very strong"
+            this.binding.ratingLabel.setTextColor(Color.parseColor("#45de8a"))
+        } else if (passwordGenerator.rating == 5) {
+            this.binding.ratingLabel.text = "Extremely strong"
+            this.binding.ratingLabel.setTextColor(Color.parseColor("#45de8a"))
+        }
     }
 }
