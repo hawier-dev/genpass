@@ -46,6 +46,10 @@ class HomeFragment : Fragment() {
             generatePassword()
         }
 
+        this.binding.copyButton.setOnClickListener {
+            passwordGenerator.copyTextToClipboard(requireContext())
+        }
+
         this.binding.lengthBar.addOnChangeListener { _, value, _ ->
             passwordGenerator.length = value.toInt()
             this.binding.lengthLabel.text = value.toInt().toString()

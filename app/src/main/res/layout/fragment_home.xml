@@ -30,16 +30,30 @@
             android:editable="false" />
 
     <Button
-            android:text="@string/gen_passwd"
-            android:layout_width="150dp"
-            android:layout_height="55dp"
-            android:id="@+id/genPasswd"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.925"
-            app:cornerRadius="@dimen/radius" />
+        android:id="@+id/genPasswd"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:text="@string/gen_passwd"
+        app:cornerRadius="@dimen/radius"
+        app:layout_constraintBottom_toTopOf="@+id/copyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.986" />
+
+    <Button
+        android:id="@+id/copyButton"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:text="@string/copy_passwd"
+        app:cornerRadius="@dimen/radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963" />
 
     <com.google.android.material.slider.Slider
             android:layout_width="0dp"
